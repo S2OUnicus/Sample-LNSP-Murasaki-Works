@@ -1,0 +1,9 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">村上工務店ロゴ</title>
+  <desc id="desc">淡いグリーンの家と葉を組み合わせたロゴ</desc>
+  <rect width="128" height="128" rx="32" fill="#ECF8F0"/>
+  <path d="M24 66L64 32L104 66" stroke="#4F8F68" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M36 62V102H92V62" fill="#A7D8B8" stroke="#4F8F68" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M54 102V78H74V102" fill="#F8FFF9" stroke="#4F8F68" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M79 44C88 37 97 38 103 45C94 47 87 53 84 62C80 56 76 50 79 44Z" fill="#DDF0A8" stroke="#4F8F68" stroke-width="4" stroke-linejoin="round"/>
+</svg>

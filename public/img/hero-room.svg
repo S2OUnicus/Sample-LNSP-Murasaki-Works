@@ -1,0 +1,18 @@
+<svg width="720" height="520" viewBox="0 0 720 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">室内リフォームのイメージ</title>
+  <desc id="desc">淡いグリーンと木目のやわらかい室内空間</desc>
+  <rect width="720" height="520" rx="36" fill="#F8FFF9"/>
+  <path d="M72 420V114C72 91.9 89.9 74 112 74H608C630.1 74 648 91.9 648 114V420H72Z" fill="#ECF8F0"/>
+  <path d="M104 406V136H616V406H104Z" fill="#FFFFFF" stroke="#CBE9D4" stroke-width="4"/>
+  <rect x="128" y="160" width="192" height="112" rx="18" fill="#DDF0A8"/>
+  <rect x="344" y="160" width="248" height="112" rx="18" fill="#E9F6EE"/>
+  <rect x="128" y="300" width="464" height="72" rx="22" fill="#F1E6D2"/>
+  <rect x="166" y="328" width="122" height="24" rx="12" fill="#C7A875"/>
+  <rect x="324" y="328" width="122" height="24" rx="12" fill="#C7A875"/>
+  <rect x="482" y="328" width="70" height="24" rx="12" fill="#C7A875"/>
+  <path d="M204 220C222 194 262 194 280 220" stroke="#4F8F68" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="464" cy="214" r="32" fill="#A7D8B8"/>
+  <circle cx="520" cy="214" r="32" fill="#DDF0A8"/>
+  <path d="M104 406H616" stroke="#4F8F68" stroke-width="5" stroke-linecap="round"/>
+  <path d="M84 438H636" stroke="#CBE9D4" stroke-width="8" stroke-linecap="round"/>
+</svg>

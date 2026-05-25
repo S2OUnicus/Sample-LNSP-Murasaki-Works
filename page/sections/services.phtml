@@ -1,0 +1,20 @@
+<section id="services" class="uk-section mk-section-white">
+    <div class="uk-container uk-container-large">
+        <div class="mk-section-heading uk-text-center">
+            <p class="mk-eyebrow">Services</p>
+            <h2 class="uk-heading-small">事業内容</h2>
+            <p class="uk-text-lead">マンション内装と水回りを中心に、住まいの状態と暮らし方に合わせた改修をご提案します。</p>
+        </div>
+        <div class="uk-grid-match uk-child-width-1-2@s uk-child-width-1-3@m uk-margin-large-top" uk-grid>
+            <?php foreach (($services ?? []) as $service): ?>
+                <div>
+                    <article class="uk-card uk-card-default uk-card-body mk-service-card">
+                        <div class="mk-card-icon"><span uk-icon="icon: <?= e($service['icon']) ?>; ratio: 1.2"></span></div>
+                        <h3 class="uk-card-title"><?= e($service['title']) ?></h3>
+                        <p><?= e($service['summary']) ?></p>
+                    </article>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>

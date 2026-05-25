@@ -1,0 +1,15 @@
+<section class="mk-kpi-strip uk-section uk-section-small">
+    <div class="uk-container uk-container-large">
+        <div id="kpi-panel" class="uk-grid-small uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid hx-get="?partial=kpi" hx-trigger="revealed once" hx-target="#kpi-panel" hx-swap="innerHTML">
+            <?php foreach (($kpis ?? []) as $kpi): ?>
+                <div>
+                    <div class="mk-kpi-card">
+                        <p class="uk-text-small uk-margin-remove"><?= e($kpi['label']) ?></p>
+                        <p class="uk-h3 uk-margin-remove"><?= e($kpi['value']) ?><span class="uk-text-small"><?= e($kpi['unit'] ?? '') ?></span></p>
+                        <p class="uk-text-meta uk-margin-remove"><?= e($kpi['memo'] ?? '') ?></p>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,53 @@
+<section id="contact" class="uk-section mk-contact-section">
+    <div class="uk-container uk-container-large">
+        <div class="uk-grid-large uk-flex-middle" uk-grid>
+            <div class="uk-width-2-5@m">
+                <p class="mk-eyebrow">Contact</p>
+                <h2 class="uk-heading-small">まずは10分、住まいの困りごとを聞かせてください。</h2>
+                <p class="uk-text-lead">壁紙だけ、トイレだけ、見積もりだけでも大丈夫です。必要な工事と後回しにできる工事を一緒に整理します。</p>
+                <div class="mk-contact-phone">
+                    <span uk-icon="icon: receiver; ratio: 1.2"></span>
+                    <a href="<?= e(tel_href($config['company']['tel'])) ?>"><?= e($config['company']['tel']) ?></a>
+                    <p><?= e($config['company']['business_hours']) ?> / <?= e($config['company']['closed']) ?></p>
+                </div>
+            </div>
+            <div class="uk-width-3-5@m">
+                <form class="uk-card uk-card-default uk-card-body mk-contact-form" hx-post="?partial=contact" hx-target="#contact-result" hx-swap="innerHTML">
+                    <div class="uk-grid-small" uk-grid>
+                        <div class="uk-width-1-2@s">
+                            <label class="uk-form-label" for="name">お名前</label>
+                            <input class="uk-input" id="name" name="name" type="text" placeholder="山田 太郎" required>
+                        </div>
+                        <div class="uk-width-1-2@s">
+                            <label class="uk-form-label" for="tel">電話番号</label>
+                            <input class="uk-input" id="tel" name="tel" type="tel" placeholder="090-0000-0000" required>
+                        </div>
+                        <div class="uk-width-1-2@s">
+                            <label class="uk-form-label" for="email">メール</label>
+                            <input class="uk-input" id="email" name="email" type="email" placeholder="mail@example.com" required>
+                        </div>
+                        <div class="uk-width-1-2@s">
+                            <label class="uk-form-label" for="category">相談内容</label>
+                            <select class="uk-select" id="category" name="category" required>
+                                <option value="内装リフォーム">内装リフォーム</option>
+                                <option value="トイレ・キッチン">トイレ・キッチン</option>
+                                <option value="原状回復">原状回復</option>
+                                <option value="小修繕">小修繕</option>
+                                <option value="その他">その他</option>
+                            </select>
+                        </div>
+                        <div class="uk-width-1-1">
+                            <label class="uk-form-label" for="message">ご相談内容</label>
+                            <textarea class="uk-textarea" id="message" name="message" rows="5" placeholder="例：中古マンションの壁紙とトイレ交換を相談したいです。" required></textarea>
+                        </div>
+                    </div>
+                    <div class="uk-margin-medium-top uk-flex uk-flex-middle uk-flex-between uk-flex-wrap">
+                        <button class="uk-button uk-button-primary uk-border-pill" type="submit">送信する</button>
+                        <p class="uk-text-meta uk-margin-small-top">このフォームはデモ用です。実運用前にメール通知・CSRF対策を追加してください。</p>
+                    </div>
+                    <div id="contact-result" class="uk-margin-top" aria-live="polite"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

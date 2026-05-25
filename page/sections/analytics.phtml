@@ -1,0 +1,17 @@
+<section class="uk-section mk-section-white">
+    <div class="uk-container uk-container-large">
+        <div class="uk-grid-large uk-flex-middle" uk-grid>
+            <div class="uk-width-2-5@m">
+                <p class="mk-eyebrow">Data</p>
+                <h2 class="uk-heading-small">サービス比率の見える化</h2>
+                <p>Apache EChartsで、相談内容の構成を可視化する想定です。公開後はSQLite3の集計ビューから取得したデータへ差し替えられます。</p>
+                <button class="uk-button uk-button-default uk-border-pill" type="button" hx-get="?partial=kpi" hx-target="#kpi-panel" hx-swap="innerHTML">KPIを再読み込み</button>
+            </div>
+            <div class="uk-width-3-5@m">
+                <div class="mk-chart-card">
+                    <div id="service-chart" class="mk-chart" data-service-share='<?= e(json_encode($serviceShare ?? [], JSON_UNESCAPED_UNICODE | JSON_HEX_APOS | JSON_HEX_QUOT)) ?>'></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

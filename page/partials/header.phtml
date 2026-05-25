@@ -1,0 +1,7 @@
+<?php $showHeader = (bool)($config['maintenance']['enabled'] ?? false); ?>
+<header class="mk-flash" <?= $showHeader ? '' : 'hidden' ?>>
+    <div class="uk-container uk-container-large uk-padding-small uk-text-center">
+        <span uk-icon="icon: warning"></span>
+        <?= e($config['maintenance']['message'] ?? '') ?>
+    </div>
+</header>

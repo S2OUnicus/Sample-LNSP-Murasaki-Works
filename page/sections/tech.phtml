@@ -1,0 +1,27 @@
+<section id="tech" class="uk-section mk-section-white">
+    <div class="uk-container uk-container-large">
+        <div class="uk-grid-large" uk-grid>
+            <div class="uk-width-2-5@m">
+                <p class="mk-eyebrow">Technology</p>
+                <h2 class="uk-heading-small">技術構成</h2>
+                <p>初期構成では、PHPは安全な受け渡しと表示処理を担当し、SQLite3側ではビュー・トリガーで集計と整合性を担保します。</p>
+                <div class="mk-formula uk-margin-top">
+                    \(安全な表示 = 入力検証 + PDO + htmlspecialchars\)
+                </div>
+            </div>
+            <div class="uk-width-3-5@m">
+                <pre><code class="language-php">$pdo = new PDO('sqlite:' . $path);
+$repo = new Repository($pdo);
+$services = $repo-&gt;services();</code></pre>
+                <div class="uk-grid-small uk-child-width-1-3@m" uk-grid>
+                    <div><div class="mk-tech-pill">Ubuntu 26.04 LTS</div></div>
+                    <div><div class="mk-tech-pill">Nginx 1.31.1</div></div>
+                    <div><div class="mk-tech-pill">PHP 8.5.2</div></div>
+                    <div><div class="mk-tech-pill">SQLite3</div></div>
+                    <div><div class="mk-tech-pill">HTMX</div></div>
+                    <div><div class="mk-tech-pill">UIkitCSS</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

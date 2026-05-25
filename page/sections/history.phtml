@@ -1,0 +1,19 @@
+<section id="history" class="uk-section mk-section-soft">
+    <div class="uk-container uk-container-large">
+        <div class="mk-section-heading uk-text-center">
+            <p class="mk-eyebrow">History</p>
+            <h2 class="uk-heading-small">沿革</h2>
+        </div>
+        <div class="uk-margin-large-top mk-timeline">
+            <?php foreach (($histories ?? []) as $history): ?>
+                <article class="mk-timeline-item">
+                    <div class="mk-timeline-year"><?= e($history['year_label']) ?></div>
+                    <div class="mk-timeline-body">
+                        <h3><?= e($history['title']) ?></h3>
+                        <p><?= e($history['body']) ?></p>
+                    </div>
+                </article>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>

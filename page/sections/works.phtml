@@ -1,0 +1,25 @@
+<section id="works" class="uk-section mk-section-white">
+    <div class="uk-container uk-container-large">
+        <div class="mk-section-heading uk-text-center">
+            <p class="mk-eyebrow">Works</p>
+            <h2 class="uk-heading-small">施工事例</h2>
+            <p class="uk-text-lead">架空の掲載例です。公開時は実際の写真・所在地・工事期間・価格帯に差し替えます。</p>
+        </div>
+        <div class="uk-grid-match uk-child-width-1-2@m uk-margin-large-top" uk-grid>
+            <?php foreach (($works ?? []) as $work): ?>
+                <div>
+                    <article class="uk-card uk-card-default mk-work-card">
+                        <div class="mk-work-thumb" aria-hidden="true">
+                            <span><?= e($work['category']) ?></span>
+                        </div>
+                        <div class="uk-card-body">
+                            <p class="mk-eyebrow uk-margin-remove"><?= e($work['location']) ?></p>
+                            <h3 class="uk-card-title"><?= e($work['title']) ?></h3>
+                            <p><?= e($work['summary']) ?></p>
+                        </div>
+                    </article>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>

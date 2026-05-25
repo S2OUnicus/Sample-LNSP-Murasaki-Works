@@ -1,0 +1,27 @@
+<nav class="mk-nav uk-navbar-container uk-sticky uk-box-shadow-small" uk-navbar uk-sticky="sel-target: .uk-navbar-container; cls-active: mk-nav-active; show-on-up: true">
+    <div class="uk-container uk-container-large uk-width-1-1">
+        <div class="uk-navbar uk-flex uk-flex-middle">
+            <div class="uk-navbar-left mk-mobile-control">
+                <button class="uk-button uk-button-default uk-border-pill mk-icon-button" type="button" aria-label="メニューを開く" uk-toggle="target: #mk-mobile-menu">
+                    <span uk-icon="icon: menu"></span>
+                </button>
+            </div>
+
+            <div class="uk-navbar-left mk-brand-area">
+                <a class="uk-navbar-item uk-logo mk-logo" href="#top" aria-label="<?= e($config['site']['name']) ?> トップへ">
+                    <img src="<?= e(asset('img/logo.svg')) ?>" width="46" height="46" alt="<?= e($config['site']['name']) ?> ロゴ">
+                    <span class="mk-logo-text"><?= e($config['site']['logo_text']) ?></span>
+                </a>
+            </div>
+
+            <div class="uk-navbar-right mk-desktop-menu">
+                <ul class="uk-navbar-nav uk-flex-middle">
+                    <?php foreach ($config['nav'] as $item): ?>
+                        <li><a href="<?= e($item['href']) ?>"><?= e($item['label']) ?></a></li>
+                    <?php endforeach; ?>
+                </ul>
+                <a class="uk-button uk-button-primary uk-border-pill mk-nav-cta" href="#contact">無料相談</a>
+            </div>
+        </div>
+    </div>
+</nav>
