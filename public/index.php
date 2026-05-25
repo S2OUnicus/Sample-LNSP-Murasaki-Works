@@ -7,8 +7,24 @@ require_once PROJECT_ROOT . '/lib/helpers.php';
 require_once PROJECT_ROOT . '/lib/Db.php';
 require_once PROJECT_ROOT . '/lib/Repository.php';
 
-$pageName = 'トップ';
-$pageCategory = '公式サイト';
+$pageRoutes = [
+    'top' => ['name' => 'トップ', 'category' => '公式サイト', 'template' => 'top.phtml'],
+    'services' => ['name' => '事業内容', 'category' => 'サービス', 'template' => 'services.phtml'],
+    'works' => ['name' => '施工事例', 'category' => '実績紹介', 'template' => 'works.phtml'],
+    'company' => ['name' => '会社概要', 'category' => '企業情報', 'template' => 'company.phtml'],
+    'history' => ['name' => '沿革', 'category' => '企業情報', 'template' => 'history.phtml'],
+    'contact' => ['name' => 'お問い合わせ', 'category' => '相談予約', 'template' => 'contact.phtml'],
+];
+
+$currentPage = $_GET['page'] ?? 'top';
+if (!is_string($currentPage) || !isset($pageRoutes[$currentPage])) {
+    $currentPage = 'top';
+}
+$pageInfo = $pageRoutes[$currentPage];
+$pageName = $pageInfo['name'];
+$pageCategory = $pageInfo['category'];
+$pageTemplate = PROJECT_ROOT . '/page/pages/' . $pageInfo['template'];
+
 $fallback = require PROJECT_ROOT . '/lib/fallback.php';
 $services = $fallback['services'];
 $officers = $fallback['officers'];
@@ -62,17 +78,8 @@ if ($partial !== null) {
 <?php require PROJECT_ROOT . '/page/partials/nav.phtml'; ?>
 <?php require PROJECT_ROOT . '/page/partials/mobiMenu.phtml'; ?>
 
-<main id="mk-main" class="mk-main" hx-boost="true" hx-select="#mk-main" hx-target="#mk-main" hx-swap="outerHTML show:window:top">
-    <?php require PROJECT_ROOT . '/page/sections/hero.phtml'; ?>
-    <?php require PROJECT_ROOT . '/page/sections/kpi.phtml'; ?>
-    <?php require PROJECT_ROOT . '/page/sections/services.phtml'; ?>
-    <?php require PROJECT_ROOT . '/page/sections/strength.phtml'; ?>
-    <?php require PROJECT_ROOT . '/page/sections/works.phtml'; ?>
-    <?php require PROJECT_ROOT . '/page/sections/company.phtml'; ?>
-    <?php require PROJECT_ROOT . '/page/sections/analytics.phtml'; ?>
-    <?php require PROJECT_ROOT . '/page/sections/history.phtml'; ?>
-    <?php require PROJECT_ROOT . '/page/sections/tech.phtml'; ?>
-    <?php require PROJECT_ROOT . '/page/sections/contact.phtml'; ?>
+<main id="mk-main" class="mk-main" data-current-page="<?= e($currentPage) ?>">
+    <?php require $pageTemplate; ?>
 </main>
 
 <aside aria-hidden="true">

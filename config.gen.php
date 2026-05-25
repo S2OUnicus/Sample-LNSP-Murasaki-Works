@@ -1,10 +1,10 @@
 <?php
 /**
  * 村上工務店サイト 基本設定
- * v0.0.1
+ * v0.0.2
  */
 return [
-    'version' => 'v0.0.1',
+    'version' => 'v0.0.2',
     'debug' => true,
     'maintenance' => [
         'enabled' => false,
@@ -40,12 +40,12 @@ return [
         'note' => '注：2025年度連結概要（2026年3月31日終了会計年度）／従業員数：2026年3月末現在',
     ],
     'nav' => [
-        ['label' => 'トップ', 'href' => '#top'],
-        ['label' => '事業内容', 'href' => '#services'],
-        ['label' => '施工事例', 'href' => '#works'],
-        ['label' => '会社概要', 'href' => '#company'],
-        ['label' => '沿革', 'href' => '#history'],
-        ['label' => 'お問い合わせ', 'href' => '#contact'],
+        ['label' => 'トップ', 'page' => 'top', 'href' => '?page=top'],
+        ['label' => '事業内容', 'page' => 'services', 'href' => '?page=services'],
+        ['label' => '施工事例', 'page' => 'works', 'href' => '?page=works'],
+        ['label' => '会社概要', 'page' => 'company', 'href' => '?page=company'],
+        ['label' => '沿革', 'page' => 'history', 'href' => '?page=history'],
+        ['label' => 'お問い合わせ', 'page' => 'contact', 'href' => '?page=contact'],
     ],
     'database' => [
         'driver' => 'sqlite',

@@ -23,7 +23,7 @@
                 <h2 class="uk-h5">サイトマップ</h2>
                 <div class="uk-child-width-1-2 uk-grid-small" uk-grid>
                     <?php foreach ($config['nav'] as $item): ?>
-                        <div><a href="<?= e($item['href']) ?>"><?= e($item['label']) ?></a></div>
+                        <div><a href="<?= e($item['href']) ?>" hx-get="<?= e($item['href']) ?>" hx-select="#mk-main" hx-target="#mk-main" hx-swap="outerHTML show:window:top" hx-push-url="true"><?= e($item['label']) ?></a></div>
                     <?php endforeach; ?>
                 </div>
             </div>

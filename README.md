@@ -75,6 +75,13 @@ murakami-koumuten/
 │   │   ├── header.phtml
 │   │   ├── mobiMenu.phtml
 │   │   └── nav.phtml
+│   ├── pages/
+│   │   ├── top.phtml
+│   │   ├── services.phtml
+│   │   ├── works.phtml
+│   │   ├── company.phtml
+│   │   ├── history.phtml
+│   │   └── contact.phtml
 │   └── sections/
 │       ├── analytics.phtml
 │       ├── company.phtml
@@ -84,7 +91,6 @@ murakami-koumuten/
 │       ├── kpi.phtml
 │       ├── services.phtml
 │       ├── strength.phtml
-│       ├── tech.phtml
 │       └── works.phtml
 └── public/
     ├── index.php
@@ -99,7 +105,13 @@ murakami-koumuten/
 
 - `header`：速報・メンテナンスなど専用。通常は非表示。
 - `nav`：PCではロゴ左・メニュー右。モバイル縦向きではOff-canvasメニュー。
-- `main`：トップ、KPI、事業内容、強み、施工事例、会社概要、データ、沿革、技術構成、問い合わせ。
+- `main`：各ページの本文を表示。ナビゲーションからHTMXで読み込み、`#mk-main` の内容を置き換えます。
+  - `?page=top`：トップ
+  - `?page=services`：事業内容
+  - `?page=works`：施工事例
+  - `?page=company`：会社概要
+  - `?page=history`：沿革
+  - `?page=contact`：お問い合わせ
 - `aside`：UIkit Modal専用。通常は不可視。
 - `footer`：会社情報、サイトマップ、ライセンス表示。
 
@@ -154,6 +166,14 @@ server {
 ```
 
 ## 変更履歴
+
+### v0.0.2 - 2026-05-25
+
+- トップ、事業内容、施工事例、会社概要、沿革、お問い合わせを個別ページ化
+- ナビゲーションとモバイルOff-canvasメニューをHTMX読み込みに変更
+- `#mk-main` のみを差し替えるページ遷移方式に変更
+- 「技術構成」セクションを削除
+- ナビゲーションCTAとヒーローCTAの文字色を白に固定
 
 ### v0.0.1 - 2026-05-25
 

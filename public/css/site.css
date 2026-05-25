@@ -68,6 +68,20 @@ body {
     color: #fff;
 }
 
+
+.mk-body .uk-button-primary,
+.mk-body .uk-button-primary:hover,
+.mk-body .uk-button-primary:focus,
+.mk-desktop-menu > a.mk-nav-cta,
+.mk-hero-actions > a.uk-button-primary {
+    color: #fff;
+}
+
+.mk-desktop-menu .uk-navbar-nav > li > a.mk-active-link {
+    color: var(--mk-green-dark);
+    font-weight: 700;
+}
+
 .uk-button-default {
     border-color: var(--mk-line);
     background: rgba(255,255,255,.7);
@@ -222,8 +236,7 @@ body {
 .mk-mini-card,
 .mk-kpi-card,
 .mk-strength-box,
-.mk-branch-card,
-.mk-tech-pill {
+.mk-branch-card {
     background: rgba(255,255,255,.82);
     border: 1px solid var(--mk-line);
     border-radius: 20px;
@@ -412,11 +425,6 @@ body {
     border: 1px solid var(--mk-line);
 }
 
-.mk-tech-pill {
-    text-align: center;
-    color: var(--mk-green-dark);
-    font-weight: 700;
-}
 
 .mk-contact-section {
     background:

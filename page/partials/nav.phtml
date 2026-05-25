@@ -8,7 +8,7 @@
             </div>
 
             <div class="uk-navbar-left mk-brand-area">
-                <a class="uk-navbar-item uk-logo mk-logo" href="#top" aria-label="<?= e($config['site']['name']) ?> トップへ">
+                <a class="uk-navbar-item uk-logo mk-logo" href="?page=top" hx-get="?page=top" hx-select="#mk-main" hx-target="#mk-main" hx-swap="outerHTML show:window:top" hx-push-url="true" aria-label="<?= e($config['site']['name']) ?> トップへ">
                     <img src="<?= e(asset('img/logo.svg')) ?>" width="46" height="46" alt="<?= e($config['site']['name']) ?> ロゴ">
                     <span class="mk-logo-text"><?= e($config['site']['logo_text']) ?></span>
                 </a>
@@ -17,10 +17,10 @@
             <div class="uk-navbar-right mk-desktop-menu">
                 <ul class="uk-navbar-nav uk-flex-middle">
                     <?php foreach ($config['nav'] as $item): ?>
-                        <li><a href="<?= e($item['href']) ?>"><?= e($item['label']) ?></a></li>
+                        <li><a href="<?= e($item['href']) ?>" hx-get="<?= e($item['href']) ?>" hx-select="#mk-main" hx-target="#mk-main" hx-swap="outerHTML show:window:top" hx-push-url="true" class="<?= ($currentPage ?? 'top') === ($item['page'] ?? '') ? 'mk-active-link' : '' ?>"><?= e($item['label']) ?></a></li>
                     <?php endforeach; ?>
                 </ul>
-                <a class="uk-button uk-button-primary uk-border-pill mk-nav-cta" href="#contact">無料相談</a>
+                <a class="uk-button uk-button-primary uk-border-pill mk-nav-cta" href="?page=contact" hx-get="?page=contact" hx-select="#mk-main" hx-target="#mk-main" hx-swap="outerHTML show:window:top" hx-push-url="true">無料相談</a>
             </div>
         </div>
     </div>

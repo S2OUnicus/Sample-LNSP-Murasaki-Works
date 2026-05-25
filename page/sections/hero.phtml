@@ -6,8 +6,8 @@
                 <h1 class="uk-heading-medium mk-hero-title"><?= e($config['site']['catchcopy']) ?></h1>
                 <p class="uk-text-lead mk-hero-lead">マンションの壁紙・床・建具から、トイレ・キッチンなどの水回りまで。村上工務店は、相談しやすさと確かな施工管理で、暮らしを少しずつ心地よく整えます。</p>
                 <div class="uk-flex uk-flex-wrap uk-flex-middle uk-margin-medium-top mk-hero-actions">
-                    <a class="uk-button uk-button-primary uk-button-large uk-border-pill" href="#contact">無料相談をする</a>
-                    <a class="uk-button uk-button-default uk-button-large uk-border-pill" href="#services">事業内容を見る</a>
+                    <a class="uk-button uk-button-primary uk-button-large uk-border-pill" href="?page=contact" hx-get="?page=contact" hx-select="#mk-main" hx-target="#mk-main" hx-swap="outerHTML show:window:top" hx-push-url="true">無料相談をする</a>
+                    <a class="uk-button uk-button-default uk-button-large uk-border-pill" href="?page=services" hx-get="?page=services" hx-select="#mk-main" hx-target="#mk-main" hx-swap="outerHTML show:window:top" hx-push-url="true">事業内容を見る</a>
                 </div>
                 <div class="uk-grid-small uk-child-width-auto uk-margin-large-top mk-trust-row" uk-grid>
                     <div><span uk-icon="icon: check"></span> 現地調査対応</div>
